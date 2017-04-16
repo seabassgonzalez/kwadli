@@ -43,8 +43,8 @@ class Hangar extends React.Component {
       <table>
         <thead>
           <tr>
-            <th></th>
-            <th></th>
+            <th>Name</th>
+            <th>Flight Status</th>
           </tr>
         </thead>  
         <tbody>
@@ -54,3 +54,15 @@ class Hangar extends React.Component {
     )
    }
 }
+
+// SearchBar class extends Component
+  // render
+    // return
+      // form
+        // text input for user search
+        // checkbox to show only flight worthy ships
+class SearchBar extends React.Component {
+  render(){
+
+  }
+}  
