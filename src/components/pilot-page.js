@@ -60,9 +60,19 @@ class Hangar extends React.Component {
     // return
       // form
         // text input for user search
-        // checkbox to show only flight worthy ships
+        // p 
+          // checkbox to show only flight worthy ships
 class SearchBar extends React.Component {
   render(){
-
+    return (
+      <form>
+        <input type="text" />
+        <p>
+          <input type="checkbox" />
+          {' '}
+          Only show flight worthy ships
+        </p>
+      </form>
+    )
   }
 }  
