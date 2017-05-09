@@ -76,3 +76,10 @@ class SearchBar extends React.Component {
     )
   }
 }  
+
+// FilterableShipsTable class extends Component
+  // render
+    // return 
+      // div
+        // SearchBar
+        // 
