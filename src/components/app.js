@@ -6,11 +6,15 @@
 			// div with simple text
 
 import React, { Component } from 'react';
+import Header from './header';
 
 export default class App extends Component {
 	render(){
 		return (
-			<div>Simple text placeholder</div>
+			<div>
+				<Header />
+				Body Content
+			</div>
 		);
 	}
 }
