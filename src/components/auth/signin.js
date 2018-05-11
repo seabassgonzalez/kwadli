@@ -1,9 +1,11 @@
-// import Rect and Component from react
+// import React and Component from react
+// import connect from react
 // import redux form and Field from redux-form
+// import * as actions from actions
 
 // class Signin extends Component
-	// handleFormSubmit taking email and password
-		// log user in
+	// handleFormSubmit taking object with props email and password
+		// call action off props this.props.signinUser() passing it object email, password
 	// render
 		// const to store fields and password onto this.props using handle submit helper from redux form
 		//return 
@@ -16,16 +18,19 @@
 					//  Field with name taking password as input component with bootstrap classname form-control
 				// button action submit classname btn btn-primary with text Sign in
 
-// export default reduxForm(configuration)(component) -- object with property form set to name of form, fields to produce including email and password, and Signin as component
+// export default reduxForm(configuration)(component) -- object with property form set to signin name of form, fields to produce array including email and password, second argument mapStateToProps not using yet so null, actions to access imported actions on props, and Signin as component
 
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { reduxForm, Field } from 'redux-form'; 
+import * as actions from '../../actions';
 
 class Signin extends Component {
 	handleFormSubmit({ email, password }){
 		console.log(email, password);
 		console.log('props are ', this.props);
 		console.log('fields are ', this.props.fields);
+		this.props.signinUser({ email, password });
 	}
 	render(){
 		const { handleSubmit, fields: { email, password }} = this.props;
@@ -45,7 +50,10 @@ class Signin extends Component {
 	}
 }
 
-export default reduxForm({
-	form: 'signin',
-	fields: ['email', 'password']
-})(Signin);
+export default reduxForm(
+	{
+		form: 'signin',
+		fields: ['email', 'password']
+	})(
+		connect(null, actions)(Signin)
+	);

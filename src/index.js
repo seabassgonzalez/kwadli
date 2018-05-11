@@ -3,12 +3,13 @@
 // import Provider from react-redux
 // import createStore and applyMimddleware from redux
 // import Router components Router Route IndexRoute and browserHistory from react-router
+// import reduxThunk from redux-thunk to access dispatch as middleware
 
 // import App from components/app
 // import Signin from components auth signin
 // import reducers from reducers
 
-// create const createStoreWithMiddleware set to applyMiddleware() call passing in createStore
+// create const createStoreWithMiddleware set to applyMiddleware() call passing in reduxThunk middleware and createStore
 
 // ReactDOM.render
 	// provider component with store property set to object callback to createStoreWithMiddleware passing reducers
@@ -24,12 +25,13 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import reduxThunk from 'redux-thunk';
 
 import App from './components/app';
 import Signin from './components/auth/signin';
 import reducers from './reducers';
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
