@@ -3,7 +3,9 @@
 // export default class App extends Component
 	// render
 		// return	
-			// div with simple text
+			// div 
+				// header
+				// this.props.children in case passed children
 
 import React, { Component } from 'react';
 import Header from './header';
@@ -13,7 +15,7 @@ export default class App extends Component {
 		return (
 			<div>
 				<Header />
-				Body Content
+				{this.props.children}
 			</div>
 		);
 	}
