@@ -1,7 +1,7 @@
 // actions creator file
 // import axios from axios
 // import browserHistory from react-router
-// import USER_AUTH and AUTH_ ERROR type from types
+// import USER_AUTH AUTH_ ERROR and USER_DEAUTH type from types
 
 // store root url for api server url
 
@@ -20,9 +20,13 @@
 		// type property set to AUTH_ERROR action type
 		// payload set to error
 
+// export function signoutUser
+	// delete token on local storage by calling localStorage.remoteItem() passing it 'token'
+	// return UNAUTH_USER action type
+
 import axios from 'axios';
 import { browserHistory } from 'react-router';
-import { USER_AUTH, AUTH_ERROR } from './types';	
+import { USER_AUTH, AUTH_ERROR, USER_DEAUTH } from './types';	
 
 const ROOT_URL = 'http://localhost:3090';
 
@@ -44,5 +48,12 @@ export function authError(error){
 	return{ 
 		type: AUTH_ERROR,
 		payload: error
+	};
+}
+
+export function signoutUser(){
+	localStorage.removeItem('token');
+	return {
+		type: USER_DEAUTH
 	};
 }
