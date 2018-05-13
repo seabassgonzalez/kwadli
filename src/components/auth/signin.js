@@ -18,7 +18,15 @@
 					//  Field with name taking password as input component with bootstrap classname form-control
 				// button action submit classname btn btn-primary with text Sign in
 
-// export default reduxForm(configuration)(component) -- object with property form set to signin name of form, fields to produce array including email and password, second argument mapStateToProps not using yet so null, actions to access imported actions on props, and Signin as component
+// create mapStateToProps function taking state
+	// returns opject with prop errorMessage set to state.auth.error
+
+// export default reduxForm(
+	//object with property 
+		// form set to signin, name of form 
+		// fields to produce array including email and password
+	// object with 
+		// call to connect() taking (mapStateToProps, actions) and Signin
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -50,10 +58,14 @@ class Signin extends Component {
 	}
 }
 
+function mapStateToProps(state){
+	return { errorMessage: state.auth.error };
+}
+
 export default reduxForm(
 	{
 		form: 'signin',
 		fields: ['email', 'password']
 	})(
-		connect(null, actions)(Signin)
+		connect(mapStateToProps, actions)(Signin)
 	);

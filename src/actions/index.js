@@ -1,7 +1,7 @@
 // actions creator file
 // import axios from axios
 // import browserHistory from react-router
-// import USER_AUTH type from types
+// import USER_AUTH and AUTH_ ERROR type from types
 
 // store root url for api server url
 
@@ -13,11 +13,16 @@
 				// save JWT token by saving it in local storage with setItem the name and where it came from response.data
 				// redirect to route '/feature' using browserHistory.push - programmatic route change
 			// use .catch() promise construct if request is bad
-				// show error
+				// show error by using dispatch() calling authError action creator with an error message
+
+// export function authError taking error to handle and return any error created during auth
+	// return object
+		// type property set to AUTH_ERROR action type
+		// payload set to error
 
 import axios from 'axios';
 import { browserHistory } from 'react-router';
-import { USER_AUTH } from './types';	
+import { USER_AUTH, AUTH_ERROR } from './types';	
 
 const ROOT_URL = 'http://localhost:3090';
 
@@ -30,7 +35,14 @@ export function signinUser({ email, password }){
 				browserHistory.push('/feature');
 			})
 			.catch(() => {
-
+				dispatch(authError('Bad Login Information'));
 			});
 	}
 }		
+
+export function authError(error){
+	return{ 
+		type: AUTH_ERROR,
+		payload: error
+	};
+}
