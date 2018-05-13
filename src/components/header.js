@@ -5,9 +5,14 @@
 // class Header extends Component
 	// renderNavLinks helper method to decide what links to show depending on authentication
 		// if user is authenticated according to authenticated on this.props
-			// show link to sign out
+			// return
+				// li classname nav-item
+					// Link component classname nav-link to /signout route, sign out text
 		// else
-			// show links to sign in or sign up
+			// return array of two nav links - react expects this to be a list of components with keys
+				// li nav-item
+					// Link nav-link to /signin route with sign in text, adding dummy key to satisfy key expectation
+					// Link nav-link to /signup route with sign up text, adding dummy key to satisfy key expectation
 	// render
 		// return
 			// nav bootstrap classes navbar navbar-light
@@ -35,11 +40,11 @@ class Header extends Component {
 			);
 		}else{
 			return[
-				<li className="nav-item">
-					<Link>Sign In</Link>
+				<li className="nav-item" key={1}>
+					<Link className="nav-link" to="/signin">Sign In</Link>
 				</li>,
-				<li className="nav-item">
-					<Link>Sign Up</Link>
+				<li className="nav-item" key={2}>
+					<Link className="nav-link" to="/signup">Sign Up</Link>
 				</li>
 			];
 		}
@@ -47,6 +52,7 @@ class Header extends Component {
 	render(){
 		return(
 			<nav className="navbar navbar-light">
+				<Link to="/" className="navbar-brand">Kwadli</Link>
 				<ul className="nav navbar-nav">
 					{this.renderNavLinks()}
 				</ul>
@@ -61,4 +67,4 @@ function mapStateToProps(state){
 	};
 }
 
-export default connect()(Header);
+export default connect(mapStateToProps)(Header);
