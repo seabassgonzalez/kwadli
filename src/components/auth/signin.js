@@ -6,6 +6,11 @@
 // class Signin extends Component
 	// handleFormSubmit taking object with props email and password
 		// call action off props this.props.signinUser() passing it object email, password
+	// renderAlert helper method
+		// simple check if errorMessage exists on this.props
+			// if so return
+				// div with classname alert alert-danger
+					// strong bold component indicating error and error message off this.props	
 	// render
 		// const to store fields and password onto this.props using handle submit helper from redux form
 		//return 
@@ -16,6 +21,7 @@
 				// field set component with classname form-group
 					// password label
 					//  Field with name taking password as input component with bootstrap classname form-control
+				// call to renderAlert()					
 				// button action submit classname btn btn-primary with text Sign in
 
 // create mapStateToProps function taking state
@@ -40,6 +46,15 @@ class Signin extends Component {
 		console.log('fields are ', this.props.fields);
 		this.props.signinUser({ email, password });
 	}
+	renderAlert(){
+		if(this.props.errorMessage){
+			return(
+				<div className="alert alert-danger">
+					<strong>Woops!</strong> {this.props.errorMessage}
+				</div>
+			);
+		}
+	}
 	render(){
 		const { handleSubmit, fields: { email, password }} = this.props;
 		return(
@@ -52,6 +67,7 @@ class Signin extends Component {
 					<label>Password:</label>
 					<Field name="password" component="input" className="form-control" />
 				</fieldset>
+				{this.renderAlert()}
 				<button action="submit" className="btn btn-primary">Sign in</button>
 			</form>
 		);
