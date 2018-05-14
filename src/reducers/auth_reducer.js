@@ -17,7 +17,7 @@ import { USER_AUTH, USER_DEAUTH, AUTH_ERROR } from '../actions/types';
 export default function(state = {}, action){
 	switch(action.type){
 		case USER_AUTH: 
-			return { ...state, authenticated: true };
+			return { ...state, error: '', authenticated: true };
 		case USER_DEAUTH:
 			return { ...state, authenticated: false };
 		case AUTH_ERROR: 

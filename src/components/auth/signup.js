@@ -50,7 +50,7 @@ import * as actions from '../../actions';
 
 class Signup extends Component {
 	handleFormSubmit({ email, password }){
-		console.log('props are ', this.props);
+		// console.log('props are ', this.props);
 		this.props.signupUser({ email, password });
 	}
 	renderAlert(){
@@ -73,6 +73,7 @@ class Signup extends Component {
 			</div>
 		);
 	}
+	
 	render(){
 		const { handleSubmit, fields: { email, password, passwordConfirm } } = this.props;
 		return(
@@ -90,8 +91,8 @@ class Signup extends Component {
 }
 
 function validate(formProps){
-	console.log('form props are', formProps);
-	console.log('email is', formProps.email);	
+	// console.log('form props are', formProps);
+	// console.log('email is', formProps.email);	
 	const errors = {};
 	if(!formProps.email){
 		errors.email = 'Please enter an email';
@@ -105,7 +106,7 @@ function validate(formProps){
 	if(formProps.password !== formProps.passwordConfirm){
 		errors.password = 'Passwords do not match!'; 
 	}
-	console.log('errors in validate are ', errors);
+	// console.log('errors in validate are ', errors);
 	return errors;
 }
 

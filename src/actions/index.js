@@ -58,13 +58,15 @@ export function signupUser({ email, password }){
 	return function(dispatch){
 		axios.post(`${ROOT_URL}/signup`, { email, password })
 			.then(response => {
-				dispatch({ type: AUTH_USER });
+				console.log('response is ', response);
+				console.log('token in response is ', response.data.token);	
+				dispatch({ type: USER_AUTH });
 				localStorage.setItem('token', response.data.token);
 				browserHistory.push('/feature');
 			})
 			.catch(response =>{
-				console.log('response is ', response);
-				console.log('response response is ', response.response);
+				//console.log('response is ', response);
+				//console.log('response response is ', response.response);
 				dispatch(authError(response.response.data.error));
 			});
 	}
