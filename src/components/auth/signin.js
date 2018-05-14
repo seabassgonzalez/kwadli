@@ -1,5 +1,5 @@
 // import React and Component from react
-// import connect from react
+// import connect from react-redux
 // import redux form and Field from redux-form
 // import * as actions from actions
 
