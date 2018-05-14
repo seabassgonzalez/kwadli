@@ -4,24 +4,31 @@
 // import all actions from actions
 
 // class Signup extends Component
-	// render
-		// const holding object with properties handleSubmit and fields set to object with props email password and passwordConfirm all set to this.props
+	// renderField taking object with input, label, type, and meta object with touched and error
 		// return
+			// div
+				// label component holding call to {label} passed in
+				// div
+					// input component with object spread operator on input, type set to {type}
+					// place to render error div with {error} if {touched and error }
+	// render
+		// return
+			// const holding object with properties handleSubmit and fields set to object with props email password and passwordConfirm all set to this.props
 			// Form component 
-				// fieldset form-group for email
-					// label email
-					// Field component classname form-control, component input, name email, give redux control of input to redux form using email prop helper {...email}
-				// fieldset form-group for password
-					// label password
-					// Field component classname form-control, component input, name password, give redux control of input to redux form using password prop helper {...password}
-					// use reference to password helper from reduxform to access password.error and render here if there is one
-				// fieldset form-group for passwordConfirm
-					// label passwordConfirm
-					// Field component classname form-control, component input, name passwordConfirm, give redux control of input to redux form using passwordConfirm prop helper {...passwordConfirm}
+				// fieldset form-group 
+					// field component classname form-control with name type and label for email, component set to call to this.renderField
+					// field component classname form-control with name type and label for password, component set to call to this.renderField
+					// field component classname form-control with name type and label for passwordConfirm, component set to call to this.renderField
 				// button action submit classname btn btn-primary with text Sign up
 
 // create validate function taking formProps
 	// const to store errors object
+	// if no email passed to formProps
+		// errors.email set to no email message
+	// if no password passed to formProps
+		// errors.password set to no password email
+	// if no passwordConfirm passed to formProps
+		// errors.passwordConfirm set to no password confirm message
 	// if password and passwordConfirm off of formProps don't match
 		// set errors.password to password error message
 	// return errors
@@ -32,7 +39,7 @@
 		// fields to produce array including email, password, and passwordConfirm
 		// validate set to validate
 	// object with 
-		// call to connect() taking () and Signup 
+		// call to connect(null, actions) and Signup 
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -70,8 +77,17 @@ function validate(formProps){
 	console.log('form props are', formProps);
 	console.log('email is', formProps.email);
 	const errors = {};
+	if(!formProps.email){
+		errors.email = 'Please enter an email';
+	}
+	if(!formProps.password){
+		errors.password = 'Please enter a password';
+	}
+	if(!formProps.paswordConfirm){
+		errors.passwordConfirm = 'Please enter a password confirmation';
+	}
 	if(formProps.password !== formProps.passwordConfirm){
-		errors.password = 'Passwords do not match!' 
+		errors.password = 'Passwords do not match!'; 
 	}
 	console.log('errors in validate are ', errors);
 	return errors;

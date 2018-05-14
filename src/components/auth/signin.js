@@ -11,16 +11,20 @@
 			// if so return
 				// div with classname alert alert-danger
 					// strong bold component indicating error and error message off this.props	
+	// renderField taking object with input, label, type, and meta object with touched and error
+		// return
+			// div
+				// label component holding call to {label} passed in
+				// div
+					// input component with object spread operator on input, type set to {type}
+					// place to render error div with {error} if {touched and error }
 	// render
 		// const to store fields and password onto this.props using handle submit helper from redux form
 		//return 
-			// form with onsubmit handler that calls handleSubmit calling this.handleFormSubmit bound to this instance - handleSubmit puts props on fields and passes to handleFormSubmit
-				// field set component with classname form-group
-					// email label
-					//  Field with name taking email as input component with  bootstrap classname form-control
-				// field set component with classname form-group
-					// password label
-					//  Field with name taking password as input component with bootstrap classname form-control
+			// Form component 
+				// fieldset form-group 
+					// field component classname form-control with name type and label for email, component set to call to this.renderField
+					// field component classname form-control with name type and label for password, component set to call to this.renderField
 				// call to renderAlert()					
 				// button action submit classname btn btn-primary with text Sign in
 
