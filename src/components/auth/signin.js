@@ -21,7 +21,7 @@
 	// render
 		// const to store fields and password onto this.props using handle submit helper from redux form
 		//return 
-			// Form component 
+			// Form component onSubmit set to object with handleSubmit(this.handleFormSubmit) binding to this instance
 				// fieldset form-group 
 					// field component classname form-control with name type and label for email, component set to call to this.renderField
 					// field component classname form-control with name type and label for password, component set to call to this.renderField
@@ -33,10 +33,10 @@
 
 // export default reduxForm(
 	//object with property 
-		// form set to signin, name of form 
-		// fields to produce array including email and password
+		// Form component set to signin
+		// fields to produce array including email, password
 	// object with 
-		// call to connect() taking (mapStateToProps, actions) and Signin
+		// call to connect(mapStateToProps, actions) and Signin
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -92,6 +92,7 @@ export default reduxForm(
 	{
 		form: 'signin',
 		fields: ['email', 'password']
-	})(
-		connect(mapStateToProps, actions)(Signin)
-	);
+	}
+)(
+	connect(mapStateToProps, actions)(Signin)
+);
