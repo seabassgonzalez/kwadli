@@ -11,8 +11,8 @@
 // import Signup from components auth signup
 // import Profile from components profile
 // import Home from components home
-// import reducers from reducers
 // import requireAuth higher order component from components require_authentication
+// import reducers from reducers
 
 // create const createStoreWithMiddleware set to applyMiddleware() call passing in reduxThunk middleware and createStore
 
@@ -41,20 +41,27 @@ import Signout from './components/auth/signout';
 import Signup from './components/auth/signup';
 import Profile from './components/profile';
 import Home from './components/home';
+import RequireAuth from './components/auth/require_auth';
+import { USER_AUTH } from './actions/types';
 import reducers from './reducers';
-import requireAuth from './components/auth/require_auth';
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
+const store = createStoreWithMiddleware(reducers);
+
+const token = localStorage.getItem('token');
+if(token){
+	store.dispatch({type: USER_AUTH });
+}
 
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
+  <Provider store={store}>
     <Router history={browserHistory}>
     	<Route path="/" component={App}>
     		<IndexRoute component={Home} />
     		<Route path="signin" component={Signin} />
     		<Route path="signout" component={Signout} />
     		<Route path="signup" component={Signup} />
-    		<Route path="profile" component={requireAuth(Profile)} />
+    		<Route path="profile" component={RequireAuth(Profile)} />
     	</Route>
     </Router>
   </Provider>
