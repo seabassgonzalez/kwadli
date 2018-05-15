@@ -1,7 +1,7 @@
 // actions creator file
 // import axios from axios
 // import browserHistory from react-router
-// import USER_AUTH AUTH_ ERROR and USER_DEAUTH type from types
+// import USER_AUTH AUTH_ ERROR USER_DEAUTH and FETCH_DETAIL type from types
 
 // store root url for api server url
 
@@ -34,9 +34,17 @@
 	// delete token on local storage by calling localStorage.remoteItem() passing it 'token'
 	// return UNAUTH_USER action type
 
+// export function fetchDetail action creator to access protected info on server
+	// return function passing it dispatch
+		// call axios.get() passing it ROOT_URL
+			// use js promise .then() taking response fat arrow function
+				// use dispatch() passing it an object
+					// type prop set to FETCH_DETAIL action type
+					// payload set to action.payload.data.someSecretDetail from server
+
 import axios from 'axios';
 import { browserHistory } from 'react-router';
-import { USER_AUTH, AUTH_ERROR, USER_DEAUTH } from './types';	
+import { USER_AUTH, AUTH_ERROR, USER_DEAUTH, FETCH_DETAIL } from './types';	
 
 const ROOT_URL = 'http://localhost:3090';
 
@@ -84,4 +92,20 @@ export function signoutUser(){
 	return {
 		type: USER_DEAUTH
 	};
+}
+
+export function fetchDetail(){
+	return function(dispatch){
+		axios.get(ROOT_URL, {
+			headers: { authorization: localStorage.getItem('token') }
+		})
+			.then(response => {
+			 	console.log('response in fetchDetail is ', response);
+			 	console.log('response.data is ', response.data);
+				dispatch({
+					type: FETCH_DETAIL,
+					payload: response.data.someSecretDetail
+				});
+			});
+	}
 }

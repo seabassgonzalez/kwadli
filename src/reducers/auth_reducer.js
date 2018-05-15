@@ -1,5 +1,4 @@
-// to maintain auth state
-
+// reducer to maintain auth piece of state
 // imprt USER_AUTH, USER_DEAUTH, and AUTH_ERROR from actions types
 
 // export function taking state object and action
