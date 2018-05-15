@@ -9,6 +9,7 @@
 // import Signin from components auth signin
 // import Signout from components auth signout
 // import Signup from components auth signup
+// import Profile from components profile
 // import reducers from reducers
 
 // create const createStoreWithMiddleware set to applyMiddleware() call passing in reduxThunk middleware and createStore
@@ -35,6 +36,7 @@ import App from './components/app';
 import Signin from './components/auth/signin';
 import Signout from './components/auth/signout';
 import Signup from './components/auth/signup';
+import Profile from './components/profile';
 import reducers from './reducers';
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
@@ -46,6 +48,7 @@ ReactDOM.render(
     		<Route path="signin" component={Signin} />
     		<Route path="signout" component={Signout} />
     		<Route path="signup" component={Signup} />
+    		<Route path="profile" component={Profile} />
     	</Route>
     </Router>
   </Provider>
