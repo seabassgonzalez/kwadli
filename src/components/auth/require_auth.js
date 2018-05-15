@@ -14,7 +14,7 @@
 		// render
 			// return Compose Component with spread operator on this.props for a place to render in case props are passed
 	// mapStateToProps taking state
-		// return object with property authenticated set to state.authenticated			
+		// return object with property authenticated set to authenticated boolean off of auth piece of state - state.auth.authenticated
 	// return connect(mapStateToProps)(Authentication)
 
 import React, { Component } from 'react';
@@ -43,7 +43,7 @@ export default function(ComposedComponent){
 		}
 	}
 	function mapStateToProps(state){
-		return { authenticated: state.authenticated };
+		return { authenticated: state.auth.authenticated };
 	}
 	return connect(mapStateToProps)(Authentication);
 }

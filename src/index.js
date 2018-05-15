@@ -10,14 +10,17 @@
 // import Signout from components auth signout
 // import Signup from components auth signup
 // import Profile from components profile
+// import Home from components home
 // import reducers from reducers
+// import requireAuth higher order component from components require_authentication
 
 // create const createStoreWithMiddleware set to applyMiddleware() call passing in reduxThunk middleware and createStore
 
 // ReactDOM.render
 	// provider component with store property set to object callback to createStoreWithMiddleware passing reducers
 		// Router with history set to browserHistory
-			// app component
+			// Route path / rendering app component
+				// IndexRoute component rendering Home
 				// signin route set to Signin component when visited
 				// signout route renders Signout component when visited
 				// signup route renders Signout component when visited
@@ -38,6 +41,7 @@ import Signout from './components/auth/signout';
 import Signup from './components/auth/signup';
 import Profile from './components/profile';
 import reducers from './reducers';
+import requireAuth from './components/auth/require_auth';
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 
@@ -48,7 +52,7 @@ ReactDOM.render(
     		<Route path="signin" component={Signin} />
     		<Route path="signout" component={Signout} />
     		<Route path="signup" component={Signup} />
-    		<Route path="profile" component={Profile} />
+    		<Route path="profile" component={requireAuth(Profile)} />
     	</Route>
     </Router>
   </Provider>

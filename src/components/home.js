@@ -3,14 +3,14 @@
 // export default class profile extends Component
 	// render
 		// return	
-			// div this is a profile text
+			// div welcome
 
 import React, { Component } from 'react';
 
 export default class Profile extends Component {
 	render(){
 		return(
-			<div>This is a profile</div>	
+			<div>Welcome to Kwadli</div>	
 		);
 	}
 }
