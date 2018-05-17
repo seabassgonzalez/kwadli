@@ -27,46 +27,33 @@
 // export default connect()(Header)					
 
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { Link } from 'react-router';
 
-class Header extends Component {
-	renderNavLinks(){
-		if(this.props.authenticated){
-			return(
-				<li className="nav-item">
-					<Link className="nav-link" to="/signout">Sign Out</Link>
-				</li>
-			);
-		}else{
-			return[
-				<div className="form-inline" key={1}>
-				<li className="nav-item navItems" >
-					<Link className="nav-link" to="/signin">Sign In</Link>
-				</li>
-				<li className="nav-item navItems">
-					<Link className="nav-link" to="/signup">Sign Up</Link>
-				</li>
-				</div>
-			];
-		}
-	}
+export default class Footer extends Component {
 	render(){
 		return(
 			<nav className="navbar navbar-light">
 				<Link to="/" className="navbar-brand">Kwadli</Link>
 				<ul className="nav navbar-nav">
-					{this.renderNavLinks()}
+					<div className="form-inline" key={1}>
+						<li className="nav-item navItems" >
+							<Link className="nav-link" to="/about">About</Link>
+						</li>
+						<li className="nav-item navItems">
+							<Link className="nav-link" to="/Contact">Contact</Link>
+						</li>
+						<li className="nav-item navItems">
+							<Link className="nav-link" to="/Terms">Terms</Link>
+						</li>
+						<li className="nav-item navItems">
+							<Link className="nav-link" to="/Privacy">Privacy</Link>
+						</li>
+						<li className="nav-item navItems">
+							<Link className="nav-link" to="/Copyright">Copyright</Link>
+						</li>
+					</div>
 				</ul>
 			</nav>
 		);
 	}
 }
-
-function mapStateToProps(state){
-	return {
-		authenticated: state.auth.authenticated
-	};
-}
-
-export default connect(mapStateToProps)(Header);

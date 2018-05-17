@@ -34,7 +34,7 @@ class Profile extends Component {
 	render(){
 		console.log('someSecretDetail is ', this.props.someSecretDetail);
 		return(
-			<div>
+			<div className="centeredComponent">
 				<div>
 					This is a profile
 				</div>

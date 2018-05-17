@@ -1,3 +1,145 @@
+.invite-button {
+	background-color: #F7CA18 !important;
+	border-color: #F7CA18 !important;
+	color: white;
+}
+
+.buttonContainer {
+	padding-top: 30px;
+}
+
 .error {
 	color: red;
+}
+
+.navItems {
+	margin: 5px;
+	padding: 5px;
+}
+
+.centeredComponent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.formComponent {
+	display: flex;
+	flex-direction: row;
+	align-items: right;
+}
+
+.jumbotron {
+	background-image: url("../images/droneTakeOff_Hero.jpg");
+	background-size: cover;
+	color: white;
+}
+
+.jumbotronText {
+	padding-top:75px;
+}
+
+.benefits {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 10px;
+}
+
+.benefitsItems {
+	display: flex;
+}
+
+.benefitsItem {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 10px;
+}
+
+.benefitsItemText { 
+	width: 75%;
+}
+
+.benefitsImg {
+	padding: 20px;
+}
+
+.incentives {
+	display: flex;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.communityInvite {
+	background-color: #BE90D4;
+	color: white;
+	padding: 20px;
+}
+
+.features {
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+}
+
+.featuresItem {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 20px;
+}
+
+.featuresItemText {
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width: 400px;
+}
+
+.sponsors {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+}
+
+.sponsorRow {
+	display: flex;
+	
+}
+
+.signin-container {
+	padding: 50px;
+}
+
+.signin-block {
+	width: 320px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #fff;
+    border-radius: 5px;
+    border-top: 5px solid #BE90D4;
+    border-left: 1px solid #BE90D4;
+    border-right: 1px solid #BE90D4;
+    border-bottom: 1px solid #BE90D4; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+}
+
+.signinFields {
+	display: flex;
+}
+
+.signin-button {
+	background-color: #BE90D4 !important;
+	border-color: #BE90D4 !important;
+	color: white;
 }

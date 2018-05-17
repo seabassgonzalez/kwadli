@@ -77,15 +77,24 @@ class Signup extends Component {
 	render(){
 		const { handleSubmit, fields: { email, password, passwordConfirm } } = this.props;
 		return(
-			<form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
-				<fieldset className="form-group">
-					<Field name="email" type="email" component={this.renderField} label="Email" className="form-control" />
-					<Field name="password" type="password" component={this.renderField} label="Password" className="form-control" />
-					<Field name="passwordConfirm" type="password" component={this.renderField} label="Confirm Password" className="form-control" />
-				</fieldset>
-				{this.renderAlert()}
-				<button action="submit" className="btn btn-primary">Sign up</button>
-			</form>
+			<div className="signin-container">
+			<div className="signin-block centeredComponent">
+				<div className="formComponent">
+				<form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+					<fieldset className="form-group">
+					<div className="benefitsImg">
+						<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="100" width="100"></img>
+					</div>
+						<Field name="email" type="email" component={this.renderField} label="Email" className="form-control" />
+						<Field name="password" type="password" component={this.renderField} label="Password" className="form-control" />
+						<Field name="passwordConfirm" type="password" component={this.renderField} label="Confirm Password" className="form-control" />
+					</fieldset>
+					{this.renderAlert()}
+					<button action="submit" className="btn btn-primary signin-button">Sign up</button>
+				</form>
+			</div>
+			</div>
+			</div>
 		);
 	}
 }
