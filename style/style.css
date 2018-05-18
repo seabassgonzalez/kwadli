@@ -1,3 +1,17 @@
+#contentwrapper {
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.error {
+	color: red;
+}
+
+.descriptionText {
+	font-size: 14px;
+}
+
 .invite-button {
 	background-color: #F7CA18 !important;
 	border-color: #F7CA18 !important;
@@ -6,10 +20,6 @@
 
 .buttonContainer {
 	padding-top: 30px;
-}
-
-.error {
-	color: red;
 }
 
 .navItems {
@@ -33,11 +43,18 @@
 .jumbotron {
 	background-image: url("../images/droneTakeOff_Hero.jpg");
 	background-size: cover;
+	background-position: center center;
 	color: white;
 }
 
 .jumbotronText {
-	padding-top:75px;
+	padding-top:200px;
+	padding-bottom: 50px;
+}
+
+.innerJumbotronText {
+	padding-top: 25px;
+	padding-bottom: 75px;
 }
 
 .benefits {
@@ -49,6 +66,7 @@
 
 .benefitsItems {
 	display: flex;
+	padding-right: 50px;
 }
 
 .benefitsItem {
@@ -65,6 +83,7 @@
 
 .benefitsImg {
 	padding: 20px;
+	
 }
 
 .incentives {
@@ -85,11 +104,16 @@
 	display:flex;
 	flex-direction: column;
 	justify-content:center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .featuresItem {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 	padding: 20px;
 }
@@ -99,7 +123,12 @@
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	width: 400px;
+	width: 50%;
+	padding: 30px;
+}
+
+.features-img {
+	
 }
 
 .sponsors {
@@ -111,7 +140,7 @@
 
 .sponsorRow {
 	display: flex;
-	
+
 }
 
 .signin-container {

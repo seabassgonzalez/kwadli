@@ -7,9 +7,16 @@
 // class profile extends Component
 	// use componentWillMount from lifecycle to call immediately before rendering
 		// fetchDetail() off props from actions
+	// renderDetail helper function
+		// checks if there is a secret detail on props
+			// if so returns 
+				// div
+					// strong element containing this.props.someSecretDetail
 	// render
 		// return	
-			// div this is a profile text
+			// div 
+				// renderDetail()
+				// renderProfile()
 
 // connect actions to props on profile component
 // export default connect() passing it null for mapStateToProps and actions, and () Profile component
@@ -35,10 +42,8 @@ class Profile extends Component {
 		console.log('someSecretDetail is ', this.props.someSecretDetail);
 		return(
 			<div className="centeredComponent">
-				<div>
-					This is a profile
-				</div>
 				{this.renderDetail()}
+				
 			</div>
 			
 		);

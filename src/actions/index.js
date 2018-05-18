@@ -1,7 +1,7 @@
 // actions creator file
 // import axios from axios
 // import browserHistory from react-router
-// import USER_AUTH AUTH_ ERROR USER_DEAUTH and FETCH_DETAIL type from types
+// import USER_AUTH AUTH_ ERROR USER_DEAUTH FETCH_DETAIL type from types
 
 // store root url for api server url
 
@@ -44,7 +44,7 @@
 
 import axios from 'axios';
 import { browserHistory } from 'react-router';
-import { USER_AUTH, AUTH_ERROR, USER_DEAUTH, FETCH_DETAIL } from './types';	
+import { USER_AUTH, AUTH_ERROR, USER_DEAUTH, FETCH_DETAIL, FETCH_USER } from './types';	
 
 const ROOT_URL = 'http://localhost:3090';
 
@@ -53,7 +53,9 @@ export function signinUser({ email, password }){
 		axios.post(`${ROOT_URL}/signin`, { email, password })
 			.then(response => {
 				dispatch({ type: USER_AUTH });
+				console.log('user id in token in signin response is ', response.data.id);	
 				localStorage.setItem('token', response.data.token);
+				localStorage.setItem('id', response.data.id);
 				browserHistory.push('/profile');
 			})
 			.catch(() => {
@@ -67,7 +69,7 @@ export function signupUser({ email, password }){
 		axios.post(`${ROOT_URL}/signup`, { email, password })
 			.then(response => {
 				console.log('response is ', response);
-				console.log('token in response is ', response.data.token);	
+				console.log('token in response is ', response.data.token);
 				dispatch({ type: USER_AUTH });
 				localStorage.setItem('token', response.data.token);
 				browserHistory.push('/profile');
@@ -109,3 +111,7 @@ export function fetchDetail(){
 			});
 	}
 }
+
+export function fetchUsers(){
+
+};

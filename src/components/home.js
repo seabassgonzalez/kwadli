@@ -14,7 +14,7 @@ export default class Home extends Component {
 				<div className="jumbotron jumbotron-fluid">
 					<div className="centeredComponent jumbotronText">
 						<h1>Manage Your Video Transmissions</h1>
-						<div className="jumbotronText">
+						<div className="innerJumbotronText">
 							<h6>Less Channel Stomping Means Less Crashing,</h6>
 							<h6> Fewer Flyaways, & Happier Pilots</h6>
 						</div>
@@ -29,21 +29,21 @@ export default class Home extends Component {
 				<div className="container benefits centeredComponent">
 					<div className="benefitsItem">
 						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="100" width="100"></img>
+							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="200" width="200"></img>
 						</div>
 						<h4>Grow the Hobby</h4>
 						<p>Kwadli transforms groups of drone racers into organized Drone Racing Chapters by organizing members and creating a community around our event planning software.</p>
 					</div>
 					<div className="benefitsItem">
 						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="100" width="100"></img>
+							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="200" width="200"></img>
 						</div>
 						<h4>Local and National Races</h4>
 						<p>Our global network of Chapters provides the foundation for our Regional Series. Earn your position at local events across the nation.</p>
 					</div>
 					<div className="benefitsItem">
 						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="100" width="100"></img>
+							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="200" width="200"></img>
 						</div>
 						<h4>Avoid Channel Stomping</h4>
 						<p>Kwadli provides proprietary software for managing and sharing your Flight session transmission frequencies. Our simple map tool helps prevent dreaded channel stomping.</p>
@@ -57,23 +57,23 @@ export default class Home extends Component {
 					<div className="featuresItem">
 						<div className="featuresItemText">
 							<div>
-								<h6>vTx Map Tool</h6>
+								<h4>vTx Map Tool</h4>
 							</div>
 							<div>
 								<p>Share your location and broadcasting frequency on our easy to use Google Map tool. Know what channels are safe to use and avoid others stomping on your frequency while you fly.</p>
 							</div>
 						</div>
 						<div className="featuresItemImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="200" width="200"></img>
+							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="300" width="300"></img>
 						</div>
 					</div>
 					<div className="featuresItem">
 						<div className="featuresItemImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="200" width="200"></img>
+							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="300" width="300"></img>
 						</div>
 						<div className="featuresItemText">
 							<div>
-								<h6>Chapters Nationwide</h6>
+								<h4>Chapters Nationwide</h4>
 							</div>
 							<div>
 								<p>Find local chapters across the country and meet fellow pilots near you. Each chapter hosts regular events so you can see how you stack up against the competition.</p>
@@ -83,14 +83,14 @@ export default class Home extends Component {
 					<div className="featuresItem">
 						<div className="featuresItemText">
 							<div>
-								<h6>Races & Fun Flys</h6>
+								<h4>Races & Fun Flys</h4>
 							</div>
 							<div>
 								<p>Kwadli hosts frequent competitive gatherings and casual events within its extensive network. The Organization currently has over 5,000 registered pilots and 100 active chapters nationwide.</p>
 							</div>
 						</div>
 						<div className="featuresItemImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="200" width="200"></img>
+							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="300" width="300"></img>
 						</div>
 					</div>
 				</div>
@@ -103,14 +103,14 @@ export default class Home extends Component {
 					<div className="benefitsItems">
 						<div className="benefitsItem">
 							<div className="benefitsImg">
-								<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="100" width="100"></img>
+								<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="150" width="150"></img>
 							</div>
 							<h4>8,197</h4>
 							<p>Registered Drone Pilots</p>
 						</div>
 						<div className="benefitsItem">
 							<div className="benefitsImg">
-								<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="100" width="100"></img>
+								<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="150" width="150"></img>
 							</div>
 							<h4>188</h4>
 							<p>Chapters Nationwide</p>
@@ -121,36 +121,33 @@ export default class Home extends Component {
 					<h6>Proud Sponsors of Kwadli Drone Racing</h6>
 					<div className="sponsorRow">
 						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="100" width="100"></img>
+							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="125" width="125"></img>
 						</div>
 						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="100" width="100"></img>
+							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="125" width="125"></img>
 						</div>
 						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="100" width="100"></img>
+							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="125" width="125"></img>
 						</div>
 						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="100" width="100"></img>
+							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="125" width="125"></img>
 						</div>
 						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="100" width="100"></img>
-						</div>
-						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="100" width="100"></img>
+							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="125" width="125"></img>
 						</div>
 					</div>
 					<div className="sponsorRow">
 						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="100" width="100"></img>
+							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="125" width="125"></img>
 						</div>
 						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="100" width="100"></img>
+							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="125" width="125"></img>
 						</div>
 						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="100" width="100"></img>
+							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="125" width="125"></img>
 						</div>
 						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="100" width="100"></img>
+							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="125" width="125"></img>
 						</div>
 					</div>
 				</div>
