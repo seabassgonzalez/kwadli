@@ -1,11 +1,11 @@
-#contentwrapper {
-	width: 90%;
-	margin-right: auto;
-	margin-left: auto;
-}
+.p-a-0 { padding:        0 !important; }
 
 .error {
 	color: red;
+}
+
+.thing {
+	background-color: blue;
 }
 
 .descriptionText {

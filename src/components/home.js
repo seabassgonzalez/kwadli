@@ -23,7 +23,7 @@ export default class Home extends Component {
 						</div>
 					</div>
 				</div>
-				<div className="container centeredComponent">
+				<div className="container-fluid centeredComponent">
 					<h3>Take Your FPV Drone Racing to the Next Level</h3>
 				</div>
 				<div className="container benefits centeredComponent">
@@ -49,11 +49,11 @@ export default class Home extends Component {
 						<p>Kwadli provides proprietary software for managing and sharing your Flight session transmission frequencies. Our simple map tool helps prevent dreaded channel stomping.</p>
 					</div>
 				</div>
-				<div className="container centeredComponent communityInvite benefitsItem">
+				<div className="container-fluid centeredComponent communityInvite benefitsItem">
 					<h3>Ready to Join the Community?</h3>
 					<p><a className="btn btn-primary btn-lg invite-button" href="#" role="button">Learn more</a></p>
 				</div>
-				<div className="container features">
+				<div className="container-fluid features">
 					<div className="featuresItem">
 						<div className="featuresItemText">
 							<div>
@@ -94,7 +94,7 @@ export default class Home extends Component {
 						</div>
 					</div>
 				</div>
-				<div className="container communityInvite incentives">
+				<div className="container-fluid communityInvite incentives">
 					<div className="benefitsItem">
 						<h3>Join Kwadli</h3>
 						<p className="benefitsItemText">Kwadli is a national, professional, drone racing league with over 100 chapters. There are no other drone racing leagues with the amount of registered pilots found within our community. Want to get started?</p>
@@ -117,7 +117,7 @@ export default class Home extends Component {
 						</div>
 					</div>
 				</div>
-				<div className="container sponsors">
+				<div className="container-fluid sponsors">
 					<h6>Proud Sponsors of Kwadli Drone Racing</h6>
 					<div className="sponsorRow">
 						<div className="benefitsImg">
@@ -151,7 +151,7 @@ export default class Home extends Component {
 						</div>
 					</div>
 				</div>
-				<div className="container centeredComponent communityInvite benefitsItem">
+				<div className="container-fluid centeredComponent communityInvite benefitsItem">
 					<h6>Create your Kwadli profile to gain access to local chapters and start racing! Kwadli was created by pilots, for pilots. Therefore, there is no cost because we work to make competitive drone racing available to everyone.</h6>
 					<p><a className="btn btn-primary btn-lg invite-button" href="#" role="button">Create a Free Account</a></p>
 				</div>
