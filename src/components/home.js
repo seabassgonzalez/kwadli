@@ -10,151 +10,191 @@ import React, { Component } from 'react';
 export default class Home extends Component {
 	render(){
 		return(
-			<div>
-				<div className="jumbotron jumbotron-fluid">
-					<div className="centeredComponent jumbotronText">
-						<h1>Manage Your Video Transmissions</h1>
-						<div className="innerJumbotronText">
-							<h6>Less Channel Stomping Means Less Crashing,</h6>
-							<h6> Fewer Flyaways, & Happier Pilots</h6>
-						</div>
-						<div className="centeredComponent buttonContainer">
-							<p><a className="btn btn-primary btn-lg invite-button" href="#" role="button">Get Started</a></p>
-						</div>
-					</div>
-				</div>
-				<div className="container-fluid centeredComponent">
-					<h3>Take Your FPV Drone Racing to the Next Level</h3>
-				</div>
-				<div className="container benefits centeredComponent">
-					<div className="benefitsItem">
-						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="200" width="200"></img>
-						</div>
-						<h4>Grow the Hobby</h4>
-						<p>Kwadli transforms groups of drone racers into organized Drone Racing Chapters by organizing members and creating a community around our event planning software.</p>
-					</div>
-					<div className="benefitsItem">
-						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="200" width="200"></img>
-						</div>
-						<h4>Local and National Races</h4>
-						<p>Our global network of Chapters provides the foundation for our Regional Series. Earn your position at local events across the nation.</p>
-					</div>
-					<div className="benefitsItem">
-						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="200" width="200"></img>
-						</div>
-						<h4>Avoid Channel Stomping</h4>
-						<p>Kwadli provides proprietary software for managing and sharing your Flight session transmission frequencies. Our simple map tool helps prevent dreaded channel stomping.</p>
-					</div>
-				</div>
-				<div className="container-fluid centeredComponent communityInvite benefitsItem">
-					<h3>Ready to Join the Community?</h3>
-					<p><a className="btn btn-primary btn-lg invite-button" href="#" role="button">Learn more</a></p>
-				</div>
-				<div className="container-fluid features">
-					<div className="featuresItem">
-						<div className="featuresItemText">
-							<div>
-								<h4>vTx Map Tool</h4>
-							</div>
-							<div>
-								<p>Share your location and broadcasting frequency on our easy to use Google Map tool. Know what channels are safe to use and avoid others stomping on your frequency while you fly.</p>
-							</div>
-						</div>
-						<div className="featuresItemImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="300" width="300"></img>
-						</div>
-					</div>
-					<div className="featuresItem">
-						<div className="featuresItemImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="300" width="300"></img>
-						</div>
-						<div className="featuresItemText">
-							<div>
-								<h4>Chapters Nationwide</h4>
-							</div>
-							<div>
-								<p>Find local chapters across the country and meet fellow pilots near you. Each chapter hosts regular events so you can see how you stack up against the competition.</p>
+			<div className="professional-landing">
+				<div className="hero-section">
+					<div className="hero-content">
+						<div className="hero-text">
+							<h1 className="hero-title">Professional FPV Drone Racing Network</h1>
+							<p className="hero-subtitle">Join the largest community of competitive drone pilots. Connect, compete, and elevate your racing career.</p>
+							<div className="hero-buttons">
+								<button className="btn-primary">Get Started</button>
+								<button className="btn-secondary">Learn More</button>
 							</div>
 						</div>
 					</div>
-					<div className="featuresItem">
-						<div className="featuresItemText">
-							<div>
-								<h4>Races & Fun Flys</h4>
-							</div>
-							<div>
-								<p>Kwadli hosts frequent competitive gatherings and casual events within its extensive network. The Organization currently has over 5,000 registered pilots and 100 active chapters nationwide.</p>
-							</div>
-						</div>
-						<div className="featuresItemImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="300" width="300"></img>
-						</div>
-					</div>
 				</div>
-				<div className="container-fluid communityInvite incentives">
-					<div className="benefitsItem">
-						<h3>Join Kwadli</h3>
-						<p className="benefitsItemText">Kwadli is a national, professional, drone racing league with over 100 chapters. There are no other drone racing leagues with the amount of registered pilots found within our community. Want to get started?</p>
-						<p><a className="btn btn-primary btn-lg invite-button" href="#" role="button">Learn more</a></p>
-					</div>
-					<div className="benefitsItems">
-						<div className="benefitsItem">
-							<div className="benefitsImg">
-								<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="150" width="150"></img>
+				<section className="features-section">
+					<div className="container">
+						<h2 className="section-title">Why Choose Kwadli</h2>
+						<div className="features-grid">
+							<div className="feature-card">
+								<div className="feature-icon">
+									<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+										<circle cx="12" cy="12" r="10"></circle>
+										<path d="M12 6v6l4 2"></path>
+									</svg>
+								</div>
+								<h3>Professional Network</h3>
+								<p>Connect with over 8,000 registered pilots across 188 chapters nationwide. Build your racing career with industry connections.</p>
 							</div>
-							<h4>8,197</h4>
-							<p>Registered Drone Pilots</p>
-						</div>
-						<div className="benefitsItem">
-							<div className="benefitsImg">
-								<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="150" width="150"></img>
+							<div className="feature-card">
+								<div className="feature-icon">
+									<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+										<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+										<polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+									</svg>
+								</div>
+								<h3>Advanced Technology</h3>
+								<p>Our proprietary frequency management system prevents channel conflicts, ensuring safe flights and competitive integrity.</p>
 							</div>
-							<h4>188</h4>
-							<p>Chapters Nationwide</p>
+							<div className="feature-card">
+								<div className="feature-icon">
+									<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+										<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+										<circle cx="9" cy="7" r="4"></circle>
+										<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+										<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+									</svg>
+								</div>
+								<h3>Championship Events</h3>
+								<p>Compete in local, regional, and national championships. Earn recognition and advance your professional racing career.</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div className="container-fluid sponsors">
-					<h6>Proud Sponsors of Kwadli Drone Racing</h6>
-					<div className="sponsorRow">
-						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="125" width="125"></img>
-						</div>
-						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="125" width="125"></img>
-						</div>
-						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="125" width="125"></img>
-						</div>
-						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="125" width="125"></img>
-						</div>
-						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="125" width="125"></img>
-						</div>
-					</div>
-					<div className="sponsorRow">
-						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="125" width="125"></img>
-						</div>
-						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="125" width="125"></img>
-						</div>
-						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="125" width="125"></img>
-						</div>
-						<div className="benefitsImg">
-							<img className="img-circle" src="../images/droneTakeOff_Hero.jpg"	height="125" width="125"></img>
+				</section>
+				<section className="stats-section">
+					<div className="container">
+						<div className="stats-grid">
+							<div className="stat-card">
+								<h3 className="stat-number">8,197</h3>
+								<p className="stat-label">Active Pilots</p>
+							</div>
+							<div className="stat-card">
+								<h3 className="stat-number">188</h3>
+								<p className="stat-label">Chapters Nationwide</p>
+							</div>
+							<div className="stat-card">
+								<h3 className="stat-number">500+</h3>
+								<p className="stat-label">Annual Events</p>
+							</div>
+							<div className="stat-card">
+								<h3 className="stat-number">$2M+</h3>
+								<p className="stat-label">Prize Pool</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div className="container-fluid centeredComponent communityInvite benefitsItem">
-					<h6>Create your Kwadli profile to gain access to local chapters and start racing! Kwadli was created by pilots, for pilots. Therefore, there is no cost because we work to make competitive drone racing available to everyone.</h6>
-					<p><a className="btn btn-primary btn-lg invite-button" href="#" role="button">Create a Free Account</a></p>
-				</div>
+				</section>
+				<section className="services-section">
+					<div className="container">
+						<h2 className="section-title">Our Platform Features</h2>
+						<div className="services-grid">
+							<div className="service-item">
+								<div className="service-content">
+									<h3>Frequency Management</h3>
+									<p>Advanced vTx mapping technology ensures interference-free racing. Real-time frequency allocation prevents channel conflicts during events.</p>
+									<a href="#" className="service-link">Learn about vTx Map →</a>
+								</div>
+								<div className="service-image">
+									<div className="service-image-placeholder">Frequency Management System</div>
+								</div>
+							</div>
+							<div className="service-item reverse">
+								<div className="service-image">
+									<div className="service-image-placeholder">Chapter Network Map</div>
+								</div>
+								<div className="service-content">
+									<h3>Chapter Network</h3>
+									<p>Join local chapters, participate in regional events, and build your racing community. Our network spans all major metropolitan areas.</p>
+									<a href="#" className="service-link">Find your chapter →</a>
+								</div>
+							</div>
+							<div className="service-item">
+								<div className="service-content">
+									<h3>Professional Racing League</h3>
+									<p>Compete in sanctioned events, earn rankings, and qualify for national championships. Track your progress through our competitive system.</p>
+									<a href="#" className="service-link">View upcoming events →</a>
+								</div>
+								<div className="service-image">
+									<div className="service-image-placeholder">Racing League Events</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section className="testimonial-section">
+					<div className="container">
+						<h2 className="section-title">What Our Pilots Say</h2>
+						<div className="testimonials-grid">
+							<div className="testimonial-card">
+								<p className="testimonial-text">"Kwadli transformed my hobby into a professional career. The network and resources are unmatched in the drone racing community."</p>
+								<div className="testimonial-author">
+									<div className="author-avatar"></div>
+									<div>
+										<p className="author-name">Michael Chen</p>
+										<p className="author-title">Pro Pilot, West Coast Chapter</p>
+									</div>
+								</div>
+							</div>
+							<div className="testimonial-card">
+								<p className="testimonial-text">"The frequency management system is a game-changer. No more crashes due to signal interference during competitions."</p>
+								<div className="testimonial-author">
+									<div className="author-avatar"></div>
+									<div>
+										<p className="author-name">Sarah Johnson</p>
+										<p className="author-title">Chapter Lead, Texas</p>
+									</div>
+								</div>
+							</div>
+							<div className="testimonial-card">
+								<p className="testimonial-text">"From local races to nationals, Kwadli provided the pathway to elevate my skills and compete at the highest level."</p>
+								<div className="testimonial-author">
+									<div className="author-avatar"></div>
+									<div>
+										<p className="author-name">David Park</p>
+										<p className="author-title">National Champion 2023</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section className="partners-section">
+					<div className="container">
+						<h2 className="section-title">Trusted by Industry Leaders</h2>
+						<div className="partners-grid">
+							<div className="partner-logo">
+								<div className="partner-placeholder">Partner 1</div>
+							</div>
+							<div className="partner-logo">
+								<div className="partner-placeholder">Partner 2</div>
+							</div>
+							<div className="partner-logo">
+								<div className="partner-placeholder">Partner 3</div>
+							</div>
+							<div className="partner-logo">
+								<div className="partner-placeholder">Partner 4</div>
+							</div>
+							<div className="partner-logo">
+								<div className="partner-placeholder">Partner 5</div>
+							</div>
+							<div className="partner-logo">
+								<div className="partner-placeholder">Partner 6</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section className="cta-section">
+					<div className="container">
+						<div className="cta-content">
+							<h2>Ready to Take Your Racing to the Next Level?</h2>
+							<p>Join the largest professional drone racing network. Free for pilots, by pilots.</p>
+							<div className="cta-buttons">
+								<button className="btn-primary">Create Free Account</button>
+								<button className="btn-secondary">Watch Demo</button>
+							</div>
+						</div>
+					</div>
+				</section>
 			</div>	
 		);
 	}

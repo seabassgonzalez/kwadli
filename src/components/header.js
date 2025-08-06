@@ -53,11 +53,13 @@ class Header extends Component {
 	}
 	render(){
 		return(
-			<nav className="navbar navbar-light">
-				<Link to="/" className="navbar-brand">Kwadli</Link>
-				<ul className="nav navbar-nav">
-					{this.renderNavLinks()}
-				</ul>
+			<nav className="navbar">
+				<div className="container">
+					<Link to="/" className="navbar-brand">Kwadli</Link>
+					<ul className="nav navbar-nav">
+						{this.renderNavLinks()}
+					</ul>
+				</div>
 			</nav>
 		);
 	}
