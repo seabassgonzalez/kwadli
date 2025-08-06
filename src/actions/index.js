@@ -70,8 +70,10 @@ export function signupUser({ email, password }){
 			.then(response => {
 				console.log('response is ', response);
 				console.log('token in response is ', response.data.token);
+				console.log('user id in response is ', response.data.id);
 				dispatch({ type: USER_AUTH });
 				localStorage.setItem('token', response.data.token);
+				localStorage.setItem('id', response.data.id);
 				browserHistory.push('/profile');
 			})
 			.catch(response =>{

@@ -553,9 +553,25 @@ body {
 	border: 1px solid #2a2a2a;
 }
 
+.signin-header {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.signin-header h2 {
+	color: #ffffff;
+	font-size: 28px;
+	margin-bottom: 8px;
+}
+
+.signin-subtitle {
+	color: #999;
+	font-size: 16px;
+}
+
 .signin-button {
-	background-color: #0077b5;
-	border-color: #0077b5;
+	background-color: #c896d3;
+	border-color: #c896d3;
 	color: white;
 	padding: 12px 24px;
 	border-radius: 24px;
@@ -563,10 +579,51 @@ body {
 	border: none;
 	cursor: pointer;
 	transition: all 0.3s ease;
+	width: 100%;
+	margin-top: 20px;
 }
 
 .signin-button:hover {
-	background-color: #005885;
+	background-color: #b07ac5;
+	transform: translateY(-1px);
+}
+
+.btn-block {
+	display: block;
+	width: 100%;
+}
+
+.auth-links {
+	text-align: center;
+	margin-top: 24px;
+}
+
+.auth-links p {
+	color: #999;
+	margin-bottom: 8px;
+}
+
+.auth-link {
+	color: #c896d3;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.auth-link:hover {
+	color: #e0b0f0;
+	text-decoration: underline;
+}
+
+.alert {
+	padding: 12px 16px;
+	border-radius: 8px;
+	margin-bottom: 20px;
+}
+
+.alert-danger {
+	background-color: rgba(211, 47, 47, 0.1);
+	border: 1px solid rgba(211, 47, 47, 0.3);
+	color: #ff6b6b;
 }
 
 .error {

@@ -9,7 +9,8 @@ const fs = require('fs');
   await page.setViewport({ width: 1920, height: 1080 });
   
   // Navigate to your local app
-  await page.goto('http://localhost:8080', { waitUntil: 'networkidle2' });
+  const url = process.argv[2] || 'http://localhost:8080';
+  await page.goto(url, { waitUntil: 'networkidle2' });
   
   // Take a screenshot
   const screenshot = await page.screenshot({ fullPage: true });

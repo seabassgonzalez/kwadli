@@ -72,7 +72,10 @@ exports.signup = function(req,res,next){
 			if(err){
 				return next(err);
 			}
-			res.json({ token: tokenForUser(user) });
+			res.json({ 
+				token: tokenForUser(user),
+				id: user.id 
+			});
 		});
 	});
 }

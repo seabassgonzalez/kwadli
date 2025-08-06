@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(node:*)",
-      "Bash(npm start)"
+      "Bash(npm start)",
+      "Bash(open http://localhost:8080/signin)"
     ],
     "deny": []
   }
