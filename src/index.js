@@ -41,6 +41,7 @@ import Signout from './components/auth/signout';
 import Signup from './components/auth/signup';
 import Profile from './components/profile';
 import Home from './components/home';
+import FPVFrequencies from './components/fpv_frequencies';
 import RequireAuth from './components/auth/require_auth';
 import { USER_AUTH } from './actions/types';
 import reducers from './reducers';
@@ -62,6 +63,7 @@ ReactDOM.render(
     		<Route path="signout" component={Signout} />
     		<Route path="signup" component={Signup} />
     		<Route path="profile" component={RequireAuth(Profile)} />
+    		<Route path="fpv-frequencies" component={FPVFrequencies} />
     	</Route>
     </Router>
   </Provider>

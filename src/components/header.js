@@ -57,6 +57,9 @@ class Header extends Component {
 				<div className="container">
 					<Link to="/" className="navbar-brand">Kwadli</Link>
 					<ul className="nav navbar-nav">
+						<li className="nav-item">
+							<Link className="nav-link" to="/fpv-frequencies">FPV Frequencies</Link>
+						</li>
 						{this.renderNavLinks()}
 					</ul>
 				</div>

@@ -3,7 +3,9 @@
     "allow": [
       "Bash(node:*)",
       "Bash(npm start)",
-      "Bash(open http://localhost:8080/signin)"
+      "Bash(open http://localhost:8080/signin)",
+      "WebFetch(domain:dronenodes.com)",
+      "Bash(npm run dev:*)"
     ],
     "deny": []
   }
