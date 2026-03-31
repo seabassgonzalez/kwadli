@@ -15,11 +15,14 @@ import Footer from './footer';
 
 export default class App extends Component {
 	render(){
+		const isBlackboxViewer =
+			this.props.location && this.props.location.pathname === '/blackbox-viewer';
+
 		return (
 			<div>
 				<Header />
 				{this.props.children}
-				<Footer />
+				{!isBlackboxViewer && <Footer />}
 			</div>
 		);
 	}

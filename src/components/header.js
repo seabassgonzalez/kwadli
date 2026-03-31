@@ -60,6 +60,9 @@ class Header extends Component {
 						<li className="nav-item">
 							<Link className="nav-link" to="/fpv-frequencies">FPV Frequencies</Link>
 						</li>
+				<li className="nav-item">
+					<Link className="nav-link" to="/blackbox-viewer">Blackbox Viewer</Link>
+				</li>
 						{this.renderNavLinks()}
 					</ul>
 				</div>

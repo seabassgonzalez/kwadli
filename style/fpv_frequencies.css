@@ -52,7 +52,7 @@
 .pilot-marker {
   position: absolute;
   top: -10px;
-  width: 16px;
+  width: 4px;
   height: 80px;
   background: #4caf50;
   cursor: pointer;
